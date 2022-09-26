@@ -1,0 +1,189 @@
+/* Feuille de style Globale pour le projet */
+/* un artiste - Elle gère le HEADER, NAV et FOOTER */
+
+/* Choix des polices de caractères */
+/* Pour les textes la police ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* Règle CSS : font-family: 'Roboto', sans-serif; */
+/* Pour les titres Libre Baskerville */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+/* Règle CSS : font-family: 'Libre Baskerville', serif; */
+
+/* Pseudo class ROOT qui permet de */
+/* des variables de couleur */
+
+
+/* Reset du body */
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* Bloque le contenu à la bordure des boîtes */
+    box-sizing: border-box;
+}
+
+/* Position: fixed valeur par défaut la propriété POSITION */
+header{
+    position: fixed;
+    /* J'utilise 100 % du parent donc de BODY */
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    /* VH Viewport Heigth (% de hauteur) */
+    height: 10vh;
+    background-color: cadetblue;
+    padding: 10px;
+    box-shadow: 6px 6px 8px gray;
+    z-index: 10;
+    /* On applique le mode flex à ce conteneur */
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+header div {
+    /* flex: 1 0 40%; */
+    width: 20%;
+    padding: 0px;
+    /* Provisoire pour mise au point */
+    border: 1px solid black;
+}
+
+header div h1{
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.6em;
+    font-weight: bolder;
+    max-height: 0.4em;
+    padding: 0 0 20px 0;
+}
+
+header nav{
+    width: 32%;
+    margin: 0 14px 0 0px;
+    display: flex;
+    justify-content: space-between;
+    /* Provisoire */
+    border: 1px solid black;
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline;
+}
+
+header nav ul li a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: oldlace;
+    font-size: 1em;
+    font-weight: bolder;
+    margin: 0 6px 0 0;
+    padding: 4px 4px 4px 4px;
+}
+
+header nav ul li a:hover{
+    cursor: pointer;
+    background-color: oldlace;
+    color: cadetblue;
+}
+
+footer{
+    position: fixed;
+    /* J'utilise 100 % du parent donc de BODY */
+    width: 100%;
+    top: 84vh;
+    left: 0px;
+    /* VH Viewport Heigth (% de hauteur) */
+    height: auto;
+    background-color: cadetblue;
+    box-shadow: -6px -6px 8px gray;
+    z-index: 10;
+    /* On applique le mode flex à ce conteneur */
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    align-items: center;
+}
+
+footer section{
+    background-color: oldlace;
+    width: 46%;
+    height: 4.8vh;
+    margin: 4px 10px 4px 10px;
+}
+
+footer section p{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    left: 25%;
+    top: -5vh;
+    /* bottom: 5vh; */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 1em;
+    font-weight: bolder;
+    line-height: 0.8em;
+    /* Provisoire */
+    border: 1px solid black;
+}
+
+footer section span{
+    position: relative;
+    display: block;
+    top: 0.2vh;
+    left: 1%;
+    width: 1.6vw;
+    height: 2vh;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 0.4em;
+    margin: 2px 0 2px 0;
+    padding: 7px 0 0 0;
+    color: oldlace;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+footer section span:hover{
+    cursor: pointer;
+    background-color: oldlace;
+    color: cadetblue;
+}
+
+.fondBleu{
+    background-color: cadetblue;
+    border-radius: 5px;
+    border-width: 3px;
+    border-left-style: outset;
+    border-left-color: lightgray;
+    border-top-style: outset;
+    border-top-color: lightgray;
+    border-right-style: outset;
+    border-right-color: darkgrey;
+    border-bottom-style: outset;
+    border-bottom-color: darkgrey; 
+}
+
+.fondClair{
+    background-color: oldlace;
+    border-radius: 5px;
+    border-width: 3px;
+    border-left-style: outset;
+    border-left-color: lightgray;
+    border-top-style: outset;
+    border-top-color: lightgray;
+    border-right-style: outset;
+    border-right-color: darkgrey;
+    border-bottom-style: outset;
+    border-bottom-color: darkgrey; 
+}

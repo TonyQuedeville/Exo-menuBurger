@@ -1,0 +1,179 @@
+/* Feuille de style Globale pour le projet */
+/* un artiste - Elle gère le HEADER, NAV et FOOTER */
+
+/* Choix des polices de caractères */
+/* Pour les textes la police ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/* Règle CSS : font-family: 'Roboto', sans-serif; */
+/* Pour les titres Libre Baskerville */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+/* Règle CSS : font-family: 'Libre Baskerville', serif; */
+
+/* Pseudo class ROOT qui permet de */
+/* des variables de couleur */
+
+*{
+    margin: 0;
+    padding: 0;
+    /* Bloque le contenu à la bordure des boîtes */
+    box-sizing: border-box;
+}
+
+/* Reset du body */
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* Bloque le contenu à la bordure des boîtes */
+    box-sizing: border-box;
+}
+
+/* Position: fixed valeur par défaut la propriété POSITION */
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 16vh;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#myLogo{
+    width: 30%;
+    margin: 0 1em 0 0;
+}
+
+#myLogo h1{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.8em;
+    font-weight: bolder;
+    line-height: 1.2em;
+    color: whitesmoke;
+}
+
+#myNavigation{
+    width: 90%;
+    color: whitesmoke;
+    margin: 0.8em 1em 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+#myNavigation li{
+    list-style: none;
+}
+
+#myNavigation li a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bolder;
+    color: whitesmoke;
+    margin: 0 0.8em 0 0;
+}
+
+header nav label{
+    font-size: 1.8em;
+    font-weight: bold;
+    color: yellow;
+    margin: 0 1em 0 0;
+}
+
+header nav label:hover{
+    cursor: pointer;
+}
+
+header nav label{
+    display: none; 
+}
+
+#myBurger{
+    display: none;
+}
+
+#myBurger:checked ~ #myNavigation{
+    display: block;
+}
+
+
+
+
+/*******************************************/
+/** Section de gestion des medias queries */
+/*****************************************/
+/* Règles CSS pour les écrans inférieurs à 576px */
+@media (max-width: 576px) {
+    
+}
+
+/* Règles CSS pour les écrans inférieurs à 768px */ 
+@media (max-width: 768px) {
+
+}
+
+/* Règles CSS pour les écrans inférieurs à 992px */ 
+@media (max-width: 992px){
+    #myLogo {
+        width: 28%;
+        margin: 0 0 0 1em;
+    }
+    #myLogo h1{
+        font-size: 1.4em;
+        line-height: 1em;
+        white-space: nowrap;
+    }
+    #myNavigation{
+        display: none;
+    }
+
+    header nav label{
+        display: block;
+        box-sizing: border-box;
+    }
+    header nav label:hover{
+        cursor: pointer;
+    }
+    /* Si myBurger coché: on active le mode FLEX */
+    #myBurger[type=checkbox]:checked ~ #myNavigation{
+        display: block;
+        background-color: cadetblue;
+        width: 50%;
+        height: 27vh;
+        margin: 0 1em 1em 0;
+        position: absolute;
+        left: 60vw;
+        top: 12vh;
+    }
+
+    /* Si myBurger coché: Les items du menu principal */
+    /* sont centrés en mode FLEX */
+    #myNavigation li{
+        flex-direction: column;
+        text-align: center;
+        margin: 1.6em 0 1.2em 0;
+        border-bottom: 1px solid whitesmoke;
+    }
+    #myNavigation li a{
+        width: 10em;
+        margin: 0 0 1em 0;
+    }
+    #myNavigation li a:hover{
+        cursor: pointer;
+        background-color: whitesmoke;
+        color: cadetblue;
+    }
+}
+
+/* Règles CSS pour les écrans inférieurs à 1200px */ 
+@media (max-width: 1200px) {
+
+}
+  
